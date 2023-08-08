@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Testcomponent() {
 
@@ -10,13 +10,21 @@ export default function Testcomponent() {
     //     console.log(count);
     // }
 
-    const increase = (name) => {
-        const a = 4;
-        const b = 10;
-        // setCount(a+b);
+    useEffect(() => {
+        var item_value = sessionStorage.getItem("item_key");
+        if(item_value){
+            setCount(item_value);
+        }else{
+            setCount(0);
+        }
         
+    }, []);
+
+    const increase = (name) => {
         if(count<9){
-            setCount(count + 1);
+            var totalCount = (count + 1);
+            setCount(totalCount);
+            sessionStorage.setItem("item_key", totalCount);
         }else{
             setCount('Done');
         }

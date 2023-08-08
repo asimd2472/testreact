@@ -16,18 +16,22 @@ export default function Table() {
         
     return (
         <div>
-            <table className="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Sr.NO</th>
-                        <th>Name</th>
-                        <th>City</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {DisplayData}
-                </tbody>
-            </table>
+            {JsonData.length > 0 ? (
+                <table className="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Sr.NO</th>
+                            <th>Name</th>
+                            <th>City</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {DisplayData}
+                    </tbody>
+                </table>
+            ) : (
+                <span>No record</span>
+            )}
         </div>
     )
 }

@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { PaginationControl } from 'react-bootstrap-pagination-control';
 
-const baseURL = "https://jsonplaceholder.typicode.com/posts/1";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const baseURL = "https://jsonplaceholder.typicode.com/posts";
 
 export default function Apitable() {
 
@@ -15,14 +18,27 @@ export default function Apitable() {
 
     // get posts
   const getPosts = () => {
-    axios.get("https://jsonplaceholder.typicode.com/posts")
+    axios.get(baseURL)
       .then((response) => {
         if (response.status === 200) {
-          setPosts(response?.data);
+          setPosts(response.data);
+
+          toast.success('🦄 OKK!', {
+            position: "bottom-right",
+            autoClose: 15000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+
+          
         }
       })
       .catch((error) => {
-        console.log(error);
+          console.log(error);
       });
   }
 
@@ -49,9 +65,7 @@ export default function Apitable() {
         <tbody>
           {posts &&
             posts.map((post, keys) => (
-              <tr
-                key={keys}
-              >
+              <tr key={keys}>
                 <td> {keys+1} </td>
                 <td> {post.title} </td>
                 <td> {post.body} </td>
@@ -74,7 +88,7 @@ export default function Apitable() {
             console.log(posts);
         }}
         ellipsis={1}
-    />
+      />
     </div>
   )
 }
