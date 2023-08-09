@@ -30,11 +30,9 @@ export default function Listone() {
 					let arr = [...data, ...response.data];
 					
 					setData(arr);
-				}
-				else{
+				}else{
 					setData(response.data);
 				}
-				
 			})
 			.catch(error => {
 				alert('Axios GET request failed');
@@ -60,10 +58,7 @@ export default function Listone() {
         const pg = pageNo + 1;
         setPageNo(pg);
         console.log(pageNo);
-        getData();
-        
-
-        
+        getData();    
     }
 
   return (
