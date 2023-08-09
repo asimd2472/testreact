@@ -6,6 +6,9 @@ import AddRemoveInputField from './AddRemoveInputField';
 import Apitable from './Apitable';
 import Formvalidation from './Formvalidation';
 import PageNotFound from "./PageNotFound";
+import Infinitescroll from './Infinitescroll';
+import List from './List';
+import Listone from './Listone';
 
 export default function Routerweb() {
   return (
@@ -19,6 +22,9 @@ export default function Routerweb() {
             <Route path="/404" element={<PageNotFound />} />
             <Route path="*" element={<Navigate to="/404" />} />
             <Route path="/test" element={<Testcomponent />} />
+            <Route path="/scroll" element={<Infinitescroll/>} />
+            <Route path="/list" element={<List/>} />
+            <Route path="/listone" element={<Listone/>} />
         </Routes>
     </BrowserRouter>
   )
