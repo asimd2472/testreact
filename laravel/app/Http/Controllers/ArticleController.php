@@ -17,4 +17,9 @@ class ArticleController extends Controller
         $json['articles']=$articles;
         return response()->json($articles);
     }
+
+    public function get_dataupdate($id){
+        $articles = Article::where('id', $id)->first();
+        return response()->json($articles);
+    }
 }

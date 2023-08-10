@@ -1,0 +1,16 @@
+.thankYou {
+    background: $bg-6;
+    padding: 60px;
+    span{
+        width: 80px;
+        font-size: 80px;
+        line-height: 1;
+        color: $bg-1;
+        margin: 0 auto 1.8rem;
+    }
+    p{
+        font-size: 1.1rem;
+        line-height: 2;
+        margin-bottom: 1.8rem;
+    }
+}

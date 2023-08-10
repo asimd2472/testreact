@@ -1,0 +1,115 @@
+@mixin mainBtn{
+	border: none;
+	border-radius: 20px;
+	background-color: $bg-1;
+	color: $bg-6;
+	padding: 10px 30px;
+	font-weight: 600;
+	display: inline-block;
+	&:hover{
+		background: $bg-2;
+		color: $bg-6;
+	}
+}
+@mixin mainBtn-2{
+	border: none;
+	border-radius: 20px;
+	background-color: $bg-2;
+	color: $bg-6;
+	padding: 10px 30px;
+	font-weight: 600; 
+	display: inline-block;
+	&:hover{
+		background: $bg-2;
+		color: $bg-6;
+	}
+}
+
+  
+
+@mixin input-1 {
+	display: block;
+	width: 100%;
+	padding: 0 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #495057;
+	background-color: #fff;
+	height: 48px;
+}
+@mixin input-2 {
+	display: block;
+	width: 100%;
+	padding: 0 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #495057;
+	background-color: #fff;
+	height: 48px;
+}
+@mixin input-4 {
+	display: block;
+	width: 100%;
+	padding: 0 0.75rem;
+	font-family: 'Montserrat';
+	font-size: 18px;
+	line-height: 1.5;
+	color: #fff !important;
+	background-color: transparent;
+	border: #fff 2px solid;
+}
+
+@mixin selectOption {
+	appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	-webkit-appearance: none;
+	background: rgba(255, 255, 255, 1) url(../images/angle-arrow-down.png) center right 12px no-repeat;
+	background-size: 10px;
+	box-shadow: none;
+	padding: 0 30px 0 75px;
+	width: 100%;
+	border: 1px #f9f9f9 solid;
+	height: 50px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0 4px 5px -3px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0 4px 5px -3px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 4px 5px -3px;
+	font-size: 1rem;
+	border-radius: 10px;
+	color: #999999;
+	font-size: 14px;
+}
+
+
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+
+@mixin fronTextare{
+	resize: none;
+}
+
+
+
+@mixin position-center($text-align: center) {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: $text-align;
+}

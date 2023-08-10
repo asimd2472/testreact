@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/get_data',[ArticleController::class,'get_data'])->name('get_data');
+Route::get('/get_dataupdate/{id}',[ArticleController::class,'get_dataupdate'])->name('get_dataupdate');

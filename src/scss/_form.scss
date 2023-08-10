@@ -1,0 +1,40 @@
+// .inputBdrWhite{
+//     @include inputBdrWhite;
+    
+    
+// }
+.input-1 {
+    @include input-1
+}
+.input-2 {
+    @include input-2
+}
+.contactFormInner {
+    @include placeholder {
+        color: #d8fbff !important;
+    }
+}
+
+// .textareaBdrWhite{
+//     @include inputBdrWhite;
+//     height: 100px;
+//     resize: none;
+//     padding: 1rem;
+// }
+
+
+.front-txtare{
+    @include fronTextare;
+}
+.front-lbl{
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: $bg-1;
+}
+.form-group {
+    &:not(:last-child){
+      margin-bottom: 1rem;  
+    }
+    
+}
+

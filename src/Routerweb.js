@@ -9,6 +9,7 @@ import PageNotFound from "./PageNotFound";
 import Infinitescroll from './Infinitescroll';
 import List from './List';
 import Listone from './Listone';
+import Countryupdate from './Countryupdate';
 
 export default function Routerweb() {
   return (
@@ -25,6 +26,7 @@ export default function Routerweb() {
             <Route path="/scroll" element={<Infinitescroll/>} />
             <Route path="/list" element={<List/>} />
             <Route path="/listone" element={<Listone/>} />
+            <Route path="/country-update/:id" element={<Countryupdate/>} /> 
         </Routes>
     </BrowserRouter>
   )

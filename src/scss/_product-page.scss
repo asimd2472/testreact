@@ -1,0 +1,41 @@
+.productBann {
+    img{
+        width: 100%;
+        display: block;
+    }
+}
+
+.mainProduct {
+    img{
+        width: 100%;
+        display: block;
+    }
+}
+
+.content {
+    margin-top: -60px;
+  }
+.productArea {
+    padding: 4rem 0;
+}
+.mainProduct  {
+    p{
+        font-size: .6rem;
+    }
+    h5{
+        font-size: .9rem;
+        color: $bg-1;
+        span.text-muted{
+            color: $bg-5 !important;
+        }
+    }
+}
+.addArea{
+    .avBox {
+        img{
+            width: 100%;
+            display: block;
+        }
+    }
+}
+

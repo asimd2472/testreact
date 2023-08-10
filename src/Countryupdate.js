@@ -1,32 +1,29 @@
 import React, { useState, useEffect } from "react";
-import { Link} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
-export default function Infinitescroll() {
+export default function Countryupdate() {
 
 const [items, setItems] = useState([]);
 const [title, setTitle] = useState("");
 
-
-
-    
-    useEffect(() => {
-        fetchData();
-        setTitle("This is a cool title");
-    }, []);
-
+const routeParams = useParams();
+  
+useEffect(() => {
+    fetchData();
+}, []);
 
 const fetchData = () => {
-    var page = 1;
+    var id = routeParams.id;
    
-      axios.get(`http://localhost:8000/api/get_data?per_page=200&page=${page}`)
+      axios.get(`http://localhost:8000/api/get_dataupdate/${id}`)
       .then((response) => {
-        const data = response.data.data;
+        const data = response.data;
         setItems(data);
-        
+        setTitle(data.name+" | This is a cool title");
       })
       .catch((error) => {
         toast.error('🦄'+error, {
@@ -39,25 +36,20 @@ const fetchData = () => {
           progress: undefined,
           theme: "dark",
         });
-      });
-      
-   
+      }); 
 }
-  
+
+
 
   return (
-    <div>
-      <HelmetProvider>
-        <Helmet>
-          <title>{title ? title : "No title"}</title>
-        </Helmet>
-      </HelmetProvider>
-        <ul>
-        {items.map(item => (
-            <li key={item.id}>{item.name}<Link to={"/country-update/"+item.id}>Edit</Link></li>
-        ))}
-        </ul>
-        
-    </div>
+    <>
+        {/* <HelmetProvider> */}
+            <Helmet>
+                <title>{title ? title : ""}</title>
+            </Helmet>
+        {/* </HelmetProvider> */}
+        <div className="">{items.name}, {items.native}</div>
+    </>
+    
   )
 }

@@ -1,0 +1,77 @@
+.myAccountSection {
+    padding: 3rem 0;
+    z-index: 1;
+    background: #f8f6f5;
+    .proNapkin{
+        z-index: -1;
+    }
+    .leftMenu {
+        background: $bg-2;
+        border-radius: 20px;
+        height: 100%;
+        box-shadow: rgba(0,0,0,.3) 0 10px 20px -10px;
+        padding: 30px 0;
+        ul{
+            li{
+                &:not(:last-child){
+                    margin-bottom: 5px;
+                }
+                a{
+                    font-weight: 600;
+                    font-size: 1rem;
+                    display: block;
+                    color: $bg-6;
+                    padding: 0 30px;
+                    line-height: 3.5;
+                    &.active,&:hover{
+                        background: rgba(255,255,255,.1);
+                    }
+                }
+            }
+        }
+    }
+    .accountDtls {
+        min-height: 600px;
+        border: 1px solid rgb(235, 235, 235);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px -10px;
+        background: #fff;
+        backdrop-filter: blur(10px);
+    }
+    .changePassword {
+        max-width: 400px;
+        width: 100%;
+        h4{
+            margin-bottom: 20px;
+        }
+        label{
+            font-weight: 600;
+            font-size: 14px;
+        }
+    }
+}
+
+.thankYou {
+    background: #fff;
+    padding: 70px;
+    border-radius: 20px;
+    margin: 0 auto;
+    max-width: 900px;
+    margin: 0 auto;
+    span {
+        display: block;
+        width: 80px;
+        font-size: 80px;
+        line-height: 1;
+        margin: 0 auto 1.8rem;
+        color: $bg-1;
+    }
+    p{
+        margin-bottom: 1.7rem;
+        font-size: 1.1rem;
+        font-weight: 400;
+        line-height: 1.78;
+    }
+}
+

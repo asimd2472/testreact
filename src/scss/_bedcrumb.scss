@@ -1,0 +1,32 @@
+.bedcrumb-sec{
+    // border-top: 1px solid rgba($color: $bg-2, $alpha: 0.3);
+    padding: 2rem 0;
+    background: $bg-7;
+}
+.bedcrumb{
+    ul{
+        li{
+            color: $bg-3;
+            text-transform: capitalize;
+            a{
+                position: relative;
+                color: $bg-2;
+                &::after{
+                    position: absolute;
+                    right: -22px;
+                    content: "\f054";
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-family: "Font Awesome 5 free";
+                    font-weight: 900;
+                }
+            }
+            &:not(:last-child){
+                padding-right: 1rem;
+            }
+            &:not(:first-child){
+                padding-left: 1rem;
+            }
+        }
+    }
+}

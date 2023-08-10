@@ -1,0 +1,177 @@
+.banner {
+	height: calc(100vh - 77px);
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	flex-wrap: wrap;
+	overflow: hidden;
+	.bannerLeft {
+		flex: 0 0 46%;
+		max-width: 46%;
+		padding: 0 55px;
+		position: relative;
+		h6 {
+			color: $bg-1;
+			font-size: 3.5vw;
+			padding-bottom: 0;
+			font-weight: 600;
+			font-style: italic;
+			
+		}
+		h2 {
+			color: #2f2f2f;
+			font-size: 7vw;
+			line-height: 1;
+			letter-spacing: 0px;
+			font-weight: 700;
+		}
+		p {
+			color: $bg-3;
+			font-size: 1.6vw;
+			font-family: 'Proxima Nova Rg';
+		}
+		.mainBtn {
+			margin-top: 1.5rem;
+		}
+	}
+	// .bannerRight {
+	// 	flex: 0 0 40%;
+	// 	max-width: 40%;
+	// 	padding: 0 55px;
+	// 	svg {
+	// 		width: 100%;
+	// 		display: block;
+	// 	}
+	// }
+	.bgShape {
+		position: absolute;
+		height: 165%;
+		width: 78%;
+		display: block;
+		border-radius: 145px;
+		background: #f3f3f3 none repeat scroll 0 0;
+		bottom: 0;
+		right: 0;
+		transform: translate(25%, -21%) rotate(-37deg);
+		z-index: 0;
+		overflow: hidden;
+		&:after{
+			content: "";
+			position: absolute;
+			height: 165%;
+			width: 78%;
+			top: 0;
+			left:  0;
+			opacity: .68;
+			background: rgb(125,38,145);
+			background: -moz-linear-gradient(45deg, rgba(125,38,145,1) 0%, rgba(86,61,116,1) 100%);
+			background: -webkit-linear-gradient(45deg, rgba(125,38,145,1) 0%,rgba(86,61,116,1) 100%);
+			background: linear-gradient(45deg, rgba(125,38,145,1) 0%,rgba(86,61,116,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d2691', endColorstr='#563d74',GradientType=1 );
+		}
+		img {
+			width: 81%;
+			display: block;
+			transform: translate(-31%, 68%) rotate(37deg);
+		}
+		
+	}
+}
+.banLeftBg {
+	position: absolute;
+	top: 15%;
+	left: 0;
+	z-index: -1;
+	// transform: translateY(-50%);
+	-webkit-animation: jump2 2s linear infinite;
+	animation: jump2 2s linear infinite;
+	img{
+		max-width: 100%;
+	}
+}
+.banDotBg {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	img{
+		max-width: 100%;
+	}
+}
+
+.dotRight {
+	position: absolute;
+	left: calc(100% + 106px);
+	z-index: 1;
+	bottom: 0;
+	-webkit-animation: leftRight 5s linear infinite;
+	animation: leftRight 5s linear infinite;
+}
+
+.banRightBg {
+	position: absolute;
+	top: 40%;
+	right: 0;
+	z-index: -1;
+	-webkit-animation: jump10p 5s linear infinite;
+	animation: jump10p 5s linear infinite;
+	img{
+		max-width: 100%;
+	}
+}
+
+.homeBanMobArea {
+	display: none;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 1rem;
+	&:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		// background: rgba(1,194,141,.5);
+		background: rgba(255, 255, 255, 0.8);
+		backdrop-filter: blur(2.9px);
+	}
+	img {
+		display: block;
+		width: 100%;
+	}
+	.bannerLeft {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding: 0 15px;
+		// background: rgba(255, 255, 255, 0.09);
+		padding: 2rem;
+		// backdrop-filter: blur(5px);
+		h2 {
+			font-size: 5vw;
+			padding-bottom: 5px;
+			font-weight: 700;
+			color: $bg-3;
+			span {
+				color: #0f7559;
+			}
+		}
+		p {
+			font-size: 3.4vw;
+			line-height: 1.5;
+			color: $bg-3;
+			font-weight: 500;
+		}
+		h6 {
+			color: #0f7559;
+			font-size: 6vw;
+			font-family: 'Turbinado';
+			padding-bottom: 0;
+			font-weight: normal;
+		}
+	}
+}
+
+

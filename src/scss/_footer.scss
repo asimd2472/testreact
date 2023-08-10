@@ -1,0 +1,76 @@
+footer {
+	background: url('../images/footer-bg.png') bottom center#fff;
+	background-size: cover;
+	padding: 7rem 0 3rem;
+	position: relative;
+	z-index: 1;
+	&:after{
+		content: "";
+		position: absolute;
+		top: -29px;
+		right: 0;
+		height: 156px;
+		width: 364px;
+		background: url(../images/footer-floral.svg);
+		background-size: auto;
+		z-index: -1;
+		background-size: contain;
+	}
+}
+
+.fNav {
+	h5{
+		position: relative;
+		margin-bottom: 1.25rem;
+		&:after{
+			content: "";
+			position: absolute;
+			height: 1px;
+			width: 40px;
+			background: $bg-1;
+			bottom: 0;
+			left: 0;
+		}
+	}
+	ul {
+		li {
+			&:not(:last-child) {
+				margin-right: 1rem;
+			}
+			a {
+				color: $bg-15;
+				font-size: .8rem;
+				font-weight: 600;
+				// font-family: 'Proxima Nova Rg';
+				&:hover {
+					color: $bg-1;
+				}
+			}
+		}
+	}
+	&.social{
+		ul{
+			li{
+				margin-right: 2.25rem;
+				a{
+					color: $bg-1;
+					font-size: 1.188rem;
+					&:hover{
+						color: $bg-15;
+					}
+				}
+			}
+		}
+	}
+}
+
+.fLogo {
+	a{
+		display: block;
+		img{
+			max-width: 100%;
+			display: block;
+		}
+	}
+}
+

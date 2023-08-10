@@ -3,10 +3,8 @@ import { useFormInputValidation } from "react-form-input-validation";
 
 export default function Formvalidation() {
 
-    const [namevalue, settext] = useState("asd");
-
     const [fields, errors, form] = useFormInputValidation({
-        email_address: namevalue,
+        email_address: "",
         password: "",
         age: "",
         profileimage: "",
@@ -28,22 +26,9 @@ export default function Formvalidation() {
         const isValid = await form.validate(event);
         if (isValid) {
 
-        //   console.log(fields.profileimage);
-            event.preventDefault();
-            const formData = new FormData();
-            formData.append('image', image);
-
-            console.log(formData);
-
+          console.log(fields.profileimage);
         }
       }
-
-      const [image, setImage] = useState(null);
-
-      const handleImageChange = (e) => {
-        const selectedImage = e.target.files[0];
-        setImage(selectedImage);
-      };
 
 
   return (
@@ -96,7 +81,7 @@ export default function Formvalidation() {
                     type="file"
                     name="profileimage"
                     onBlur={form.handleBlurEvent}
-                    onChange={handleImageChange}
+                    onChange={form.handleChangeEvent}
                     value={fields.profileimage}
                 />
                 <label className="error">
@@ -130,7 +115,7 @@ export default function Formvalidation() {
             <div className="col-md-12">
                 <button type="submit" className="btn btn-outline-success">Submit</button>
             </div>
-        </div>
+      </div>
     </form>
     </div>
   )
