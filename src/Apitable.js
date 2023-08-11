@@ -17,7 +17,7 @@ export default function Apitable() {
   }, []);
 
     // get posts
-  const getPosts = () => {
+  const getPosts = async () => {
     axios.get(baseURL)
       .then((response) => {
         if (response.status === 200) {
@@ -74,8 +74,6 @@ export default function Apitable() {
                 </td>
               </tr>
             ))}
-            
-            
         </tbody>
       </table>
       <PaginationControl
